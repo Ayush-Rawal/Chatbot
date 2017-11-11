@@ -1,0 +1,56 @@
+<html ng-app="TodoAPP">
+
+<head>
+    <title>Angular Demo</title>
+    <script src=angular.min.js></script>
+    <script src=app.js></script>
+</head>
+
+<body>
+    <!-- <input type="text" ng-model="name" />
+    <h1>{{name}}</h1>
+    <a href="www.{{name}}.org" target="_blank">{{name}}</a>
+    <img ng-src="{{name}}">
+    <div ng-if="name">
+        Show me if true do not construct if false
+    </div>
+    <div ng-show="name">
+        Show me if true hide me if false
+    </div>
+    <div ng-if="name">
+    
+        Show me if true hide me if false    Show me if true do not construct if false
+    </div>
+    <div ng-if="name">
+    </div>
+
+    <button ng-click="name=!name">Fire me</button> -->
+
+    <div ng-controller="TodoCtrl as todo">
+        <input type="text" ng-model="todo.task" placeholder="Todo1">
+        <button ng-model="todo.tmp" ng-click="todo.addTask(todo.task)">Add</button>
+        <ul>
+            <li ng-repeat="t in todo.tasks track by $index">{{t}}</li>
+            <!--track by $index to resolve same val prb, foreach(ng-repeat) needs unique elements to work on -->
+        </ul>
+    </div>
+    <div ng-controller="TodoCntrl as todo1">
+        <input type="text" ng-model="todo1.task" placeholder="Todo2">
+    </div>
+</body>
+
+</html>
+
+<!-- Data entered on enter key press
+add a delete <button>
+edit button
+done button to tell whether task has been completed (changes colour, text to undo)
+Use bootstrap
+	 -->
+<!-- Install node.js
+	NPM
+	npm install -g cordova ionic
+	Android Studio or Android SDK API 23,24
+	VS Code
+	
+-->
