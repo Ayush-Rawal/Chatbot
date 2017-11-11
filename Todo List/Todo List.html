@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo List</title>
     <link rel="stylesheet" href="C:\Stuff\Projects\Full stack workshop\bootstrap.css"></link>
-    <link rel="stylesheet" href="center.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
 
     <script type="text/javascript" src="C:\Stuff\Projects\Full stack workshop\Angular\angular.min.js"></script>
 
@@ -15,9 +15,9 @@
 
 <body>
     <h2 class="center">To-Do List</h2>
-    <div>
+    <div ng-controller="enter_input">
         <input type="text" ng-model="input">Input
-        <button id="Enter">Add</button>
+        <button id="Enter" ng-if="input" ng-click="">Add</button>
     </div>
 
 </body>
