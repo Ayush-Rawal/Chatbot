@@ -8,18 +8,29 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="C:\Stuff\Projects\Full stack workshop\bootstrap.css"></link>
     <link rel="stylesheet" href="style.css"></link>
-
-    <script type="text/javascript" src="C:\Stuff\Projects\Full stack workshop\Angular\angular.min.js"></script>
-
+    <link rel="stylesheet" href="background.css"></link>
 </head>
 
-<body>
-    <h2 class="center">To-Do List</h2>
-    <div ng-controller="enter_input">
-        <input type="text" ng-model="input">Input
-        <button id="Enter" ng-if="input" ng-click="">Add</button>
-    </div>
 
+<body>
+    <script type="text/javascript" src="C:\Stuff\Projects\Full stack workshop\Angular\angular.min.js"></script>
+    <script type="text/javascript" src="todo.js"></script>
+    <div>
+        <h2 class="center mnblue">To-Do List</h2>
+    </div>
+    <div ng-controller="enter_input as input">
+        <input type="text" ng-model="input">
+        <button id="Enter_invalid" ng-if="!input" ng-click="" class="btn thistle brblue">Add</button>
+        <button id="Enter_valid" ng-if="input" ng-click="enter_input" class="btn gold brblue">Add</button>
+    </div>
+    <div id="line">
+
+    </div>
+    <div>
+        <ul>
+            <li ng-repeat="for t in tasks track by $index">{{t}}</li>
+        </ul>
+    </div>
 </body>
 
 </html>

@@ -9,3 +9,132 @@
 .right {
     align-content: right;
 }
+
+.blue {
+    color: blue
+}
+
+.red {
+    color: red
+}
+
+.rblue {
+    color: royalblue
+}
+
+.purple {
+    color: purple
+}
+
+.rpurple {
+    color: rebeccapurple
+}
+
+.teal {
+    color: teal
+}
+
+.thistle {
+    color: thistle
+}
+
+.tomato {
+    color: tomato
+}
+
+.indigo {
+    color: indigo
+}
+
+.ired {
+    color: indianred
+}
+
+.olive {
+    color: olive
+}
+
+.ored {
+    color: orangered
+}
+
+.orchid {
+    color: orchid
+}
+
+.peru {
+    color: peru
+}
+
+.pvred {
+    color: palevioletred
+}
+
+.sbrown {
+    color: saddlebrown
+}
+
+.salmon {
+    color: salmon
+}
+
+.sbrown {
+    color: sandybrown
+}
+
+.sgreen {
+    color: seagreen
+}
+
+.sblue {
+    color: slateblue
+}
+
+.sgrey {
+    color: slategrey
+}
+
+.firebrick {
+    color: firebrick
+}
+
+.fuchsia {
+    color: fuchsia
+}
+
+.fgreen {
+    color: forestgreen
+}
+
+.grod {
+    color: goldenrod
+}
+
+.coral {
+    color: coral
+}
+
+.cfblue {
+    color: cornflowerblue
+}
+
+.crimson {
+    color: crimson
+}
+
+.mnblue {
+    color: midnightblue
+}
+
+.maroon {
+    color: maroon
+}
+
+.gold {
+    color: gold
+}
+
+#line {
+    background-color: black;
+    padding: 2px;
+}
