@@ -135,6 +135,15 @@
 }
 
 #line {
-    background-color: black;
+    background-color: saddlebrown;
     padding: 2px;
+    margin: 8px 6px;
+}
+
+#done {
+    color:
+}
+
+#undone {
+    color:
 }

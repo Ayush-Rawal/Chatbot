@@ -26,9 +26,13 @@
     <div id="line">
 
     </div>
-    <div>
+    <div ng-controller="done">
         <ul>
-            <li ng-repeat="for t in tasks track by $index">{{t}}</li>
+            <div ng-repeat="for t in tasks track by $index">
+                <li>{{t}}</li>
+                <button ng-model="is_done" ng-click="done.tog_done" id="done" ng-if="!done" class="btn btn-success">Done</button>
+                <button ng-model="is_done" ng-click="done.tog_done" id="undone" ng-if="done" class="btn btn-danger">Undo</button>
+            </div>
         </ul>
     </div>
 </body>
