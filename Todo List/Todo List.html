@@ -18,21 +18,21 @@
     <div>
         <h2 class="center mnblue">To-Do List</h2>
     </div>
-    <div ng-controller="enter_input as input">
-        <input type="text" ng-model="input">
-        <button id="Enter_invalid" ng-if="!input" ng-click="" class="btn thistle brblue">Add</button>
-        <button id="Enter_valid" ng-if="input" ng-click="enter_input" class="btn gold brblue">Add</button>
+    <div ng-controller="fun as f">
+        <input type="text" ng-model="f.input">
+        <button id="Enter_invalid" ng-if="!f.input" class="btn thistle brblue">Add</button>
+        <button id="Enter_valid" ng-if="f.input" ng-click="f.addtask(input)" class="btn gold brblue">Add</button>
     </div>
     <div id="line">
 
     </div>
-    <div ng-controller="done">
+    <div ng-controller="fun as f">
         <ul>
-            <div ng-repeat="for t in tasks track by $index">
-                <li>{{t}}</li>
-                <button ng-model="is_done" ng-click="done.tog_done" id="done" ng-if="!done" class="btn btn-success">Done</button>
-                <button ng-model="is_done" ng-click="done.tog_done" id="undone" ng-if="done" class="btn btn-danger">Undo</button>
-            </div>
+
+            <li ng-repeat="t in f.tasks track by $index">{{t}}</li>
+            <!-- <button ng-model="is_done" ng-click="f.tog_done" ng-if="!done" class="btn btn-success">Done</button>
+                <button ng-model="is_done" ng-click="f.tog_done" ng-if="done" class="btn btn-danger">Undo</button> -->
+
         </ul>
     </div>
 </body>
