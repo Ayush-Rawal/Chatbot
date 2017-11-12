@@ -23,6 +23,7 @@ function chatctrl($firebaseArray, $firebaseAuth, $http) { //auth for login, arra
             var url = "https://api.genderize.io?name=peter"
             $http.get(url).then(function(data) {
                 console.log(data);
+                console.log(data.data.gender == "male" ? "Mr." : data.data.gender == "female" ? "Ms." : "None");
             })
 
         }).catch(function(error) {
