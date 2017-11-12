@@ -32,8 +32,7 @@
 
 <body>
     <div ng-controller="chatctrl as chat">
-        <input type="text" ng-model="chat.name">
-        <input type="text" ng-model="chat.text">
+        <input type="text" ng-keypress="$event.charCode==13&&chat.send(chat.text)" ng-model="chat.text">
         <button ng-click="chat.send(chat.text)">Send</button>
         <button ng-click="chat.login()">Login with google</button>
         <p ng-repeat="msg in chat.messages">

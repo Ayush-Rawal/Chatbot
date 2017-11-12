@@ -10,7 +10,8 @@ function chatctrl($firebaseArray, $firebaseAuth, $http) { //auth for login, arra
     chat.messages = $firebaseArray(chatref);
 
     chat.send = function(t, n) {
-        chat.messages.$add({ "text": t, "name": chat.name, "photo": chat.photo })
+        chat.messages.$add({ "text": t, "name": chat.name, "photo": chat.photo });
+        chat.text = "";
     }
     chat.login = function() {
         // login with Facebook, we've used google
