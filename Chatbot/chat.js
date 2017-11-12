@@ -15,7 +15,7 @@ function chatctrl($firebaseArray, $firebaseAuth) { //auth for login, array for..
     chat.login = function() {
         // login with Facebook, we've used google
         auth.$signInWithPopup("google").then(function(firebaseUser) {
-            console.log("Signed in as:", firebaseUser.uid);
+            console.log("Signed in as:", firebaseUser.user);
         }).catch(function(error) {
             console.log("Authentication failed:", error);
         });
