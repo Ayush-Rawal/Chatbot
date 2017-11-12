@@ -28,10 +28,9 @@
     </div>
     <div ng-controller="fun as f">
         <ul>
-
             <li ng-repeat="t in f.tasks track by $index">{{t}}</li>
-            <!-- <button ng-model="is_done" ng-click="f.tog_done" ng-if="!done" class="btn btn-success">Done</button>
-                <button ng-model="is_done" ng-click="f.tog_done" ng-if="done" class="btn btn-danger">Undo</button> -->
+            <button ng-controller="fun as f" ng-model="is_done" ng-click="f.tog_done" ng-if="!done" class="btn btn-success">Done</button>
+            <button ng-controller="fun as f" ng-model="is_done" ng-click="f.tog_done" ng-if="done" class="btn btn-danger">Undo</button>
 
         </ul>
     </div>

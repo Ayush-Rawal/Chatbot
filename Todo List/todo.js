@@ -21,11 +21,12 @@ function fun() {
         "Task 1",
         "Task 2"
     ];
-    this.addtask = function(t) {
-        this.tasks.push(t);
-        this.input = "";
+    this.addTask = function(t) {
+        this.tasks.push(t)
+        this.task = ""
     }
     this.tog_done = function() {
-        is_done = !is_done;
+        this.is_done = !this.is_done;
+        console.log("Executed")
     }
 }
