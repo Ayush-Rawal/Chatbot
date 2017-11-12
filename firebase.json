@@ -1,0 +1,10 @@
+{
+    "hosting": {
+        "public": "Chatbot",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }
+}
