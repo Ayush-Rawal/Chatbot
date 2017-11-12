@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chatbot</title>
 
-    <script type="text/javascript" src="C:\Stuff\Projects\Full stack workshop\Angular\angular.min.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
 
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
@@ -27,15 +27,18 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
     <script type="text/javascript" src="chat.js"></script>
-    <link rel="stylesheet" href="C:\Stuff\Projects\Full stack workshop\bootstrap.css"></link>
+    <!-- <link rel="stylesheet" href="C:\Stuff\Projects\Full stack workshop\bootstrap.css"></link> -->
 </head>
 
 <body>
     <div ng-controller="chatctrl as chat">
-        <input type="text" ng-model="chat.text">
         <input type="text" ng-model="chat.name">
+        <input type="text" ng-model="chat.text">
         <button ng-click="chat.send(chat.text)">Send</button>
-        <p ng-repeat="msg in chat.messages">{{msg.name}}--->{{msg.text}}</p>
+        <button ng-click="chat.login()">Login with google</button>
+        <p ng-repeat="msg in chat.messages">
+            <img ng-src="{{msg.photo}}" alt="user photo" width="30px">{{msg.name}}-->{{msg.text}}
+        </p>
     </div>
 
 </body>
