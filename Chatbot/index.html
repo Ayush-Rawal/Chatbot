@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Chatbot">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chatbot</title>
+
+    <script type="text/javascript" src="C:\Stuff\Projects\Full stack workshop\Angular\angular.min.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCs5ZBFiiZ-bPjlUjiIQTmxZHIQY3XDUDA",
+            authDomain: "fullstackworkshop.firebaseapp.com",
+            databaseURL: "https://fullstackworkshop.firebaseio.com",
+            projectId: "fullstackworkshop",
+            storageBucket: "fullstackworkshop.appspot.com",
+            messagingSenderId: "1070565928785"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <script type="text/javascript" src="chat.js"></script>
+    <link rel="stylesheet" href="C:\Stuff\Projects\Full stack workshop\bootstrap.css"></link>
+</head>
+
+<body>
+    <div ng-controller="chatctrl as chat">
+        <input type="text" ng-model="chat.text">
+        <button ng-click="chat.send(chat.text)">Send</button>
+    </div>
+
+</body>
+
+</html>
