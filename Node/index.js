@@ -6,11 +6,13 @@ var students = [{ name: "Sachin", age: 24 },
 app.get("/", function(req, res) {
     res.send("Hello");
 })
+
 app.get("/mail", function(req, res) {
     var params = req.query;
     console.log(params);
     res.send("Hello mail" + params.name);
 })
+
 app.get("/search", function(req, res) {
     var name = req.query.name;
     for (var i = 0; i < students.length; i++) {
